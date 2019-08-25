@@ -1,0 +1,21 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "hugo-theme-cactus"
+author = "Ruofeng Lei"
+pygmentsStyle = "tango"
+pygmentsCodeFences = true
+[permalinks]
+  posts = "/:year/:month/:day/:title/"
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 100
+    [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+[params]
+  description = "Hi, I’m a theme for the **Hugo** blogging framework. I’m particularly great for a personal web page with a simple blog. In this paragraph, you can provide some information about yourself. Below, you’re most recent or highlighted writings and projects are listed."

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+{{ partial "head.html" . }}
+<body>
+    <div id="post-home">
+        <a href="{{ .Site.BaseURL }}">Home</a>
+    </div>
+    <div id="post-nav">
+        <div class="post-menu">
+            <a href="javascript:void(0)" id="menu-toc"><i class="fas fa-bars fa-lg"></i></a>
+            <a href="javascript:void(0)" id="menu-top"><i class="fas fa-angle-double-up fa-lg"></i></a>
+            <i id="menu-tip"></i>
+        </div>
+        <div id="toc">
+            {{ partial "toc.html" . }}
+        </div>
+    </div>
+    <div class="content">
+        <link rel="stylesheet" href="/css/post.css?{{ now.Unix }}">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+            <header>        
+                <h1 class="post-title" itemprop="name headline">{{ .Title | markdownify }}</h1>
+                <div class="post-meta">
+                    <div class="post-date">
+                        <time datetime="{{ .PublishDate }}" itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time>
+                    </div>
+                    {{ if .Param "tags" }}
+                    <div class="post-tags">
+                        <i class="fas fa-tag"></i>
+                        {{ range .Param "tags" }}
+                            {{ $name := . }}
+                            {{ with $.Site.GetPage (printf "/%s/%s" "tags" ($name | urlize)) }}
+                                <a class="tag-link" href="{{ .Permalink }}">{{ $name }}</a>
+                            {{ end }}
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </header>
+            <div class="post-content" itemprop="articleBody">
+                {{ .Content }}
+            </div>
+        </article>
+        {{ partial "footer.html" . }}
+    </div>
+    <script src="/js/post.js?{{ now.Unix }}"></script>
+</body>
+

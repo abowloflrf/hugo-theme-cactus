@@ -1,0 +1,12 @@
+<footer id="footer">
+<div class="footer__inner">
+    {{ if $.Site.Copyright }}
+    <div class="copyright copyright--user">{{ $.Site.Copyright | safeHTML }}</div>
+    {{else}}
+    <div class="copyright">
+        <span>Copyright © {{ now.Year }} Powered by <a href="https://gohugo.io">Hugo</a></span>
+        <span>:: Theme <a href="#">cactus</a></span>
+    </div>
+    {{end}}
+</div>
+</footer>

@@ -1,0 +1,554 @@
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+img {
+    max-width: 100%;
+}
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+a {
+    background: none;
+    color: inherit;
+}
+a:active,
+a:hover {
+    outline: 0;
+}
+b,
+strong {
+    font-weight: bold;
+    font-style: normal;
+}
+i,
+em,
+dfn {
+    font-style: italic;
+}
+h1 {
+    margin: 0.67em 0;
+    font-size: 2em;
+}
+small {
+    font-size: 80%;
+}
+sub,
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+img {
+    border: 0;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+mark {
+    background-color: #fdffb6;
+}
+code,
+kbd,
+pre,
+samp {
+    font-family: "Fira Code", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0; /* 3 */
+    color: inherit; /* 1 */
+    font: inherit; /* 2 */
+}
+button {
+    overflow: visible;
+    border: none;
+}
+button,
+select {
+    text-transform: none;
+}
+button,
+html input[type="button"],
+/* 1 */
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer; /* 3 */
+
+    -webkit-appearance: button; /* 2 */
+}
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+input {
+    line-height: normal;
+}
+input:focus {
+    outline: none;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+input[type="search"] {
+    box-sizing: content-box; /* 2 */
+
+    -webkit-appearance: textfield; /* 1 */
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+legend {
+    padding: 0; /* 2 */
+    border: 0; /* 1 */
+}
+textarea {
+    overflow: auto;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+td,
+th {
+    padding: 0;
+}
+th {
+    font-weight: bold;
+}
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+body {
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    background: #fff;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+}
+
+::selection {
+    text-shadow: none;
+    background: #9cd7f7;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+p,
+ul,
+ol,
+dl,
+blockquote {
+    margin: 0 0 1em 0;
+}
+
+ol,
+ul {
+    padding-left: 1.3em;
+    padding-right: 1.5em;
+}
+
+ol ol,
+ul ul,
+ul ol,
+ol ul {
+    margin: 0.5em 0 1em;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+li {
+    padding-left: 0.3em;
+    line-height: 1.6em;
+}
+
+dt {
+    float: left;
+    margin: 0 20px 0 0;
+    width: 120px;
+    color: var(--darkgrey);
+    font-weight: 500;
+    text-align: right;
+}
+
+dd {
+    margin: 0 0 5px 0;
+    text-align: left;
+}
+
+blockquote {
+    margin: 1.5em 0;
+    padding: 0 1.6em 0 1.6em;
+    border-left: var(--whitegrey) 0.5em solid;
+}
+
+blockquote p {
+    margin: 0.8em 0;
+}
+
+blockquote small {
+    display: inline-block;
+    margin: 0.8em 0 0.8em 1.5em;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+/* Quotation marks */
+blockquote small:before {
+    content: "\2014 \00A0";
+}
+
+blockquote cite {
+    font-weight: bold;
+}
+blockquote cite a {
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    line-height: 1.15;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 100%;
+    color: #383838;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.725;
+    font-family: Consolas, "Liberation Mono", Menlo, Monaco, "Source Han Sans CN", "PingFang SC", "Hiragino Sans GB",
+        "Microsoft YaHei", monospace;
+    text-rendering: geometricPrecision;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+h1 {
+    display: block;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: #2bbc8a;
+    letter-spacing: 0.01em;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5em;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+hr {
+    position: relative;
+    display: block;
+    margin: 1.5em 0 2.5em;
+    padding: 0;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #dee2e6;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.content h1 a,
+.content h1 a,
+.content h2 a,
+.content h3 a,
+.content h4 a,
+.content h5 a,
+.content h6 a {
+    background: none;
+    color: inherit;
+    text-decoration: none;
+}
+#title {
+    font-family: 'Permanent Marker', cursive;
+    margin-bottom: 5px;
+}
+#header {
+    margin: 0 auto 2rem;
+    width: 100%;
+}
+#header a {
+    background: none;
+    color: inherit;
+    text-decoration: none;
+}
+#header h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #383838;
+    letter-spacing: 0em;
+    font-weight: 700;
+    font-size: 2.6rem;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+#header #nav {
+    color: #2bbc8a;
+    letter-spacing: 0em;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 0.8rem;
+}
+#header #nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    line-height: 15px;
+}
+#header #nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+#header #nav ul li::after{
+    content: '/';
+    color: #383838;
+}
+#header #nav ul li:last-child::after{
+    content: '';
+}
+#header #nav ul a {
+    margin-right: 15px;
+}
+
+.post-list {
+    padding: 0;
+}
+.post-list .post-item {
+    display: flex;
+    margin-left: 0;
+    margin-bottom: 5px;
+    list-style: none;
+}
+.post-list .post-item .meta {
+    display: block;
+    margin-right: 16px;
+    text-align: right;
+    min-width: 100px;
+    color: #666666;
+    font-size: 14px;
+}
+.post-list .post-item a {
+    color: #383838;
+    text-decoration: none;
+    background-image: linear-gradient(transparent, transparent 5px, #383838 5px, #383838);
+    background-position: bottom;
+    background-size: 100% 6px;
+    background-repeat: repeat-x;
+}
+
+.tag-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.tag-name::before {
+    content: "#";
+    margin-right: 10px;
+    font-weight: 400;
+    color: #2bbc8a;
+}
+.tags {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.tag{
+    margin-right: 14px;
+}
+.year-index{
+    margin: 2rem 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    color: #666;
+    vertical-align: top;
+    text-align: center;
+    font-size: 11px;
+}
