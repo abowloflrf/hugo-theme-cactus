@@ -1,7 +1,9 @@
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
     // 显示隐藏toc
     document.getElementById("menu-toc").addEventListener("click", () => {
         toc = document.querySelector("#toc")
+        if (toc == undefined)
+            return
         if (toc.style.visibility === "hidden") {
             toc.style.visibility = "visible"
         } else {

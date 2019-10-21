@@ -17,12 +17,6 @@ header .post-meta .post-date {
     display: inline;
 }
 
-header .post-meta .post-tags {
-    display: inline;
-}
-header .post-meta .post-tags::before {
-    content: "|";
-}
 header .post-meta .tag-link {
     background-image: linear-gradient(transparent, transparent 10px, #d480aa 10px, #d480aa);
     background-position: bottom;
@@ -38,9 +32,7 @@ header .post-meta .tag-link:before {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-}
-.post-content p {
-    text-align: justify;
+    overflow-wrap: break-word;
 }
 
 /* code block */
@@ -241,9 +233,9 @@ header .post-meta .tag-link:before {
     padding: 0 0.5em;
     content: "—";
 }
-figcaption h4{
-    font-size: 12px!important;
-    margin: 10px 0 20px 0!important;
+figcaption h4 {
+    font-size: 12px !important;
+    margin: 10px 0 20px 0 !important;
     color: #858585;
     font-style: italic;
 }
@@ -272,6 +264,7 @@ figcaption h4{
     position: absolute;
     top: 1.5rem;
     left: 0;
+    z-index: 999;
 }
 #post-home a {
     margin-left: 2rem;
@@ -328,9 +321,35 @@ figcaption h4{
     color: #666;
     font-size: 0.7rem;
 }
-
 @media (max-width: 960px) {
     #post-nav {
         display: none;
+    }
+}
+@media (max-width: 720px) {
+    header .post-title {
+        font-size: 1.5em;
+    }
+
+    .post-content h2 {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
+    .post-content h2:before {
+        left: -0.8rem;
+        font-size: 1.2rem;
+    }
+    .post-content h3 {
+        font-size: 1.1rem;
+    }
+    .post-content h4 {
+        font-size: 1.1rem;
+    }
+    .post-content h5 {
+        font-size: 1.1rem;
+    }
+    .post-content h6 {
+        font-size: 1rem;
     }
 }

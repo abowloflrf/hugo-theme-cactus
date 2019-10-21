@@ -5,16 +5,16 @@
 </section>
 <section id="writing">
     <h1><a href="#">Posts</a></h1>
-    <ul class="post-list">
+    <main class="post-list">
         {{ range first 10 (where .Site.RegularPages "Section" "posts") }}
-        <li class="post-item">
+        <article class="post-item">
             <div class="meta">
                 <time datetime="{{ .PublishDate }}" itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time>
             </div>
             <span><a href="{{ .Permalink }}"><b>{{ .Title }}</b></a></span>
-        </li>
+        </article>
         {{ end }}
-    </ul>
+    </main>
 </section>
 <section id="tags" class="tag-list">
     <h1><a href="#">Tags</a></h1>

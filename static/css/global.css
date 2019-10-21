@@ -1,5 +1,5 @@
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
 
 html,
 body,
@@ -169,8 +169,8 @@ code,
 kbd,
 pre,
 samp {
-    font-family: "Fira Code", Consolas, "Liberation Mono", Menlo, monospace;
-    font-size: 1em;
+    font-family: "Fira Code", "Menlo", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13px;
 }
 button,
 input,
@@ -444,7 +444,7 @@ hr {
     text-decoration: none;
 }
 #title {
-    font-family: 'Permanent Marker', cursive;
+    font-family: "Permanent Marker", cursive;
     margin-bottom: 5px;
 }
 #header {
@@ -484,12 +484,12 @@ hr {
     margin-right: 15px;
     vertical-align: middle;
 }
-#header #nav ul li::after{
-    content: '/';
+#header #nav ul li::after {
+    content: "/";
     color: #383838;
 }
-#header #nav ul li:last-child::after{
-    content: '';
+#header #nav ul li:last-child::after {
+    content: "";
 }
 #header #nav ul a {
     margin-right: 15px;
@@ -535,10 +535,10 @@ hr {
     font-size: 2rem;
     font-weight: bold;
 }
-.tag{
+.tag {
     margin-right: 14px;
 }
-.year-index{
+.year-index {
     margin: 2rem 0 0.5rem 0;
     font-size: 1.2rem;
 }
@@ -551,4 +551,11 @@ hr {
     vertical-align: top;
     text-align: center;
     font-size: 11px;
+}
+
+@media (max-width: 720px) {
+    body {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
 }

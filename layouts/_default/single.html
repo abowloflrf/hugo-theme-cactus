@@ -1,12 +1,12 @@
 {{ define "main" }}
 
+<link rel="stylesheet" href="/css/post.css?{{ now.Unix }}" />
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <link rel="stylesheet" href="/css/post.css?{{ now.Unix }}">
-    <header>
-        <h1 class="post-title" itemprop="name headline">{{ .Title | markdownify }}</h1>
-    </header>
-    <div class="post-content" itemprop="articleBody"></div>
-    {{ .Content }}
+    <section class="post-content" itemprop="articleBody">
+        {{ .Content }}
+    </section>
 </article>
+
+{{ partial "footer.html" . }}
 
 {{ end }}
