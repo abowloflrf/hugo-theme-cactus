@@ -5,8 +5,8 @@
 </section>
 <hr />
 <section id="writing">
-    <div class="post-list">
-        {{ range first 10 (where .Site.RegularPages "Section" "posts") }}
+    <main class="post-list">
+        {{ range first 20 (where .Site.RegularPages "Section" "posts") }}
         <article class="post-item">
             <div class="post-title">
                 <a href="{{ .Permalink }}"><b>{{ .Title }}</b></a>
@@ -22,7 +22,7 @@
             </div>
         </article>
         {{ end }}
-    </div>
+    </main>
 </section>
 <hr />
 <section id="tags" class="tag-list">

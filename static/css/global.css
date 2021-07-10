@@ -566,3 +566,10 @@ hr {
     text-align: center;
     font-size: 11px;
 }
+
+@media (max-width: 720px) {
+    body {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
