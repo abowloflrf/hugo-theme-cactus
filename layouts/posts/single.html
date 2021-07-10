@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en" }}">
-{{ partial "head.html" . }}
+<html lang="{{ .Site.LanguageCode | default "en" }}"> {{ partial "head.html" . }}
 <body>
     <header id="post-home">
         <a href="{{ .Site.BaseURL }}">Home</a>
@@ -14,33 +13,42 @@
         {{ partial "toc.html" . }}
     </aside>
     <main class="content">
-        <link rel="stylesheet" href="/css/post.css?{{ now.Unix }}">
+        <link rel="stylesheet" href="/css/post.css?{{ now.Unix }}" />
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-            <header>        
+            <header>
                 <h1 class="post-title" itemprop="name headline">{{ .Title | markdownify }}</h1>
                 <div class="post-meta">
                     <section class="post-date">
-                        <time datetime="{{ .PublishDate }}" itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time>
+                        <time datetime="{{ .PublishDate }}" itemprop="datePublished"
+                            >{{ .Date.Format "2006-01-02" }}</time
+                        >
                     </section>
                     {{ if .Param "tags" }}
                     <section class="post-tags">
                         <i class="fas fa-tag"></i>
-                        {{ range .Param "tags" }}
-                            {{ $name := . }}
-                            {{ with $.Site.GetPage (printf "/%s/%s" "tags" ($name | urlize)) }}
-                                <a class="tag-link" href="{{ .Permalink }}">{{ $name }}</a>
-                            {{ end }}
-                        {{ end }}
+                        {{ range .Param "tags" }} {{ $name := . }} {{ with $.Site.GetPage (printf "/%s/%s" "tags" ($name
+                        | urlize)) }}
+                        <a class="tag-link" href="{{ .Permalink }}">{{ $name }}</a>
+                        {{ end }} {{ end }}
                     </section>
                     {{ end }}
                 </div>
             </header>
-            <section class="post-content" itemprop="articleBody">
-                {{ .Content }}
-            </section>
+            <section class="post-content" itemprop="articleBody">{{ .Content }}</section>
         </article>
-        {{ partial "footer.html" . }}
+        {{if ne .Site.Params.utterancesRepo "" }}
+        <div>
+            <script
+                src="https://utteranc.es/client.js"
+                repo="{{.Site.Params.utterancesRepo}}"
+                issue-term="pathname"
+                label="comment"
+                theme="github-light"
+                crossorigin="anonymous"
+                async
+            ></script>
+        </div>
+        {{end}} {{ partial "footer.html" . }}
     </main>
     <script src="/js/post.js?{{ now.Unix }}"></script>
 </body>
-

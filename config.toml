@@ -5,6 +5,7 @@ theme = "hugo-theme-cactus"
 author = "Ruofeng Lei"
 pygmentsStyle = "tango"
 pygmentsCodeFences = true
+utterancesRepo = ""
 [permalinks]
   posts = "/:year/:month/:day/:title/"
 [menu]

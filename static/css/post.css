@@ -2,7 +2,7 @@ header .post-title {
     margin-top: 0;
     margin-bottom: 20px;
     text-transform: none;
-    font-size: 2rem;
+    font-size: 2em;
     line-height: 1.25;
 }
 header .post-meta {
@@ -112,46 +112,51 @@ header .post-meta .tag-link:before {
     background-size: 100% 6px;
     background-repeat: repeat-x;
 }
+.post-content h1 {
+    font-size: 2em;
+}
+.post-content h1,
+.post-content h2 {
+    border-bottom: 1px solid #e3e9ed;
+    padding-bottom: 0.3em;
+}
 .post-content h2 {
     position: relative;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     text-transform: none;
 }
 .post-content h2:before {
     position: absolute;
-    left: -1.6rem;
+    left: -1.5rem;
     color: #2bbc8a;
     content: "#";
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 }
 .post-content h3 {
     position: relative;
-    font-size: 1.4rem;
+    font-size: 1.25em;
     text-transform: none;
-}
-.post-content h3::before {
-    position: absolute;
-    left: -1.4rem;
-    content: "#";
-    font-size: 1.4rem;
 }
 
 .post-content h4 {
-    font-size: 1.3rem;
+    font-size: 1em;
 }
 .post-content h5 {
-    font-size: 1.2rem;
+    font-size: 0.875em;
 }
 .post-content h6 {
-    font-size: 1.1rem;
+    font-size: 0.85em;
 }
+.post-content h1,
 .post-content h2,
 .post-content h3,
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-top: 24px;
+    margin-bottom: 16px;
 }
 .post-content hr {
     position: relative;
@@ -335,6 +340,10 @@ figcaption h4 {
     color: #666;
     font-size: 0.85rem;
 }
+
+.utterances {
+    max-width: 100% !important;
+}
 @media (max-width: 960px) {
     #post-nav {
         display: none;
@@ -353,29 +362,8 @@ figcaption h4 {
     header .post-title {
         font-size: 1.5em;
     }
-    .post-content h2 {
-        margin-top: 1rem;
-        margin-bottom: 0.5rem;
-        font-size: 1.2rem;
-    }
+
     .post-content h2:before {
-        left: -0.8rem;
-        font-size: 1.2rem;
-    }
-    .post-content h3 {
-        font-size: 1.1rem;
-    }
-    .post-content h3:before {
-        left: -0.8rem;
-        font-size: 1.1rem;
-    }
-    .post-content h4 {
-        font-size: 1.1rem;
-    }
-    .post-content h5 {
-        font-size: 1.1rem;
-    }
-    .post-content h6 {
-        font-size: 1rem;
+        content: "";
     }
 }
