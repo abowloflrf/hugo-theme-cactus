@@ -277,7 +277,7 @@ figcaption h4 {
     z-index: 999;
 }
 #post-home a {
-    margin-left: 2rem;
+    margin-left: 16px;
 }
 #post-nav {
     position: fixed;
@@ -341,10 +341,18 @@ figcaption h4 {
     }
 }
 @media (max-width: 720px) {
+    body {
+        font-size: 14px;
+    }
+    code,
+    kbd,
+    pre,
+    samp {
+        font-size: 1em;
+    }
     header .post-title {
         font-size: 1.5em;
     }
-
     .post-content h2 {
         margin-top: 1rem;
         margin-bottom: 0.5rem;
@@ -355,6 +363,10 @@ figcaption h4 {
         font-size: 1.2rem;
     }
     .post-content h3 {
+        font-size: 1.1rem;
+    }
+    .post-content h3:before {
+        left: -0.8rem;
         font-size: 1.1rem;
     }
     .post-content h4 {

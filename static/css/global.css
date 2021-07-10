@@ -171,7 +171,7 @@ kbd,
 pre,
 samp {
     font-family: "IBM Plex Mono", "JetBrains Mono", "Fira Code", Consolas, "Liberation Mono", Menlo, monospace;
-    font-size: 1em;
+    font-size: 1rem;
 }
 button,
 input,
@@ -397,7 +397,6 @@ body {
     line-height: 1.5;
     font-family: "IBM Plex Mono", "JetBrains Mono", "Fira Code", Consolas, Menlo, "Source Han Sans CN", "PingFang SC",
         monospace;
-    /* font-family: "IBM Plex Serif", "Times New Roman", Times, serif; */
     text-rendering: geometricPrecision;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
