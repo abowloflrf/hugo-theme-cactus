@@ -1,5 +1,7 @@
-@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,300;1,700&display=swap");
 
 html,
 body,
@@ -169,7 +171,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: "Fira Code", Consolas, "Liberation Mono", Menlo, monospace;
+    font-family: "IBM Plex Mono", "JetBrains Mono", "Fira Code", Consolas, "Liberation Mono", Menlo, monospace;
     font-size: 1em;
 }
 button,
@@ -269,7 +271,7 @@ body {
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -moz-font-feature-settings: "liga" on;
+    font-feature-settings: "liga" on;
 }
 
 ::selection {
@@ -301,7 +303,7 @@ ul,
 ol,
 dl,
 blockquote {
-    margin: 0 0 1em 0;
+    margin: 0.8em 0 1em 0;
 }
 
 ol,
@@ -385,18 +387,18 @@ h6 {
 }
 
 body {
-    max-width: 48rem;
+    max-width: 60rem;
     margin-left: auto;
     margin-right: auto;
     padding-left: 2rem;
     padding-right: 2rem;
     height: 100%;
     color: #383838;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.725;
-    font-family: Consolas, "Liberation Mono", Menlo, Monaco, "Source Han Sans CN", "PingFang SC", "Hiragino Sans GB",
-        "Microsoft YaHei", monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: "IBM Plex Mono", "JetBrains Mono", "Fira Code", Consolas, Menlo, "Source Han Sans CN", "PingFang SC",
+        monospace;
+    /* font-family: "IBM Plex Serif", "Times New Roman", Times, serif; */
     text-rendering: geometricPrecision;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -444,7 +446,7 @@ hr {
     text-decoration: none;
 }
 #title {
-    font-family: 'Permanent Marker', cursive;
+    font-family: "Caveat", cursive;
     margin-bottom: 5px;
 }
 #header {
@@ -484,12 +486,12 @@ hr {
     margin-right: 15px;
     vertical-align: middle;
 }
-#header #nav ul li::after{
-    content: '/';
+#header #nav ul li::after {
+    content: "/";
     color: #383838;
 }
-#header #nav ul li:last-child::after{
-    content: '';
+#header #nav ul li:last-child::after {
+    content: "";
 }
 #header #nav ul a {
     margin-right: 15px;
@@ -499,26 +501,38 @@ hr {
     padding: 0;
 }
 .post-list .post-item {
-    display: flex;
     margin-left: 0;
-    margin-bottom: 5px;
-    list-style: none;
+    margin-bottom: 15px;
 }
-.post-list .post-item .meta {
+.post-list .post-item {
     display: block;
     margin-right: 16px;
-    text-align: right;
     min-width: 100px;
     color: #666666;
-    font-size: 14px;
 }
-.post-list .post-item a {
+.post-list .post-item .post-title a {
     color: #383838;
     text-decoration: none;
-    background-image: linear-gradient(transparent, transparent 5px, #383838 5px, #383838);
-    background-position: bottom;
-    background-size: 100% 6px;
-    background-repeat: repeat-x;
+    font-size: 1.4rem;
+}
+.post-list .post-item .post-title {
+    margin-bottom: 5px;
+}
+.post-list .meta {
+    color: #9eabb3;
+    font-size: 0.8rem;
+}
+.post-list .meta .post-tags {
+    display: inline-block;
+}
+.post-list .meta .post-tags a {
+    padding: 2px 4px;
+    text-decoration: none;
+    border: #e3e9ed 1px solid;
+    border-radius: 4px;
+}
+.post-list .meta time {
+    float: right;
 }
 
 .tag-name {
@@ -535,10 +549,10 @@ hr {
     font-size: 2rem;
     font-weight: bold;
 }
-.tag{
+.tag {
     margin-right: 14px;
 }
-.year-index{
+.year-index {
     margin: 2rem 0 0.5rem 0;
     font-size: 1.2rem;
 }

@@ -1,8 +1,8 @@
 header .post-title {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     text-transform: none;
-    font-size: 1.8rem;
+    font-size: 2rem;
     line-height: 1.25;
 }
 header .post-meta {
@@ -40,7 +40,7 @@ header .post-meta .tag-link:before {
     min-height: 100%;
 }
 .post-content p {
-    text-align: justify;
+    word-wrap: break-word;
 }
 
 /* code block */
@@ -120,8 +120,6 @@ header .post-meta .tag-link:before {
 }
 .post-content h2 {
     position: relative;
-    margin-top: 2rem;
-    margin-bottom: 1.5rem;
     font-size: 1.6rem;
     text-transform: none;
 }
@@ -133,10 +131,19 @@ header .post-meta .tag-link:before {
     font-size: 1.6rem;
 }
 .post-content h3 {
-    font-size: 1.5rem;
-}
-.post-content h4 {
+    position: relative;
     font-size: 1.4rem;
+    text-transform: none;
+}
+.post-content h3::before {
+    position: absolute;
+    left: -1.4rem;
+    content: "#";
+    font-size: 1.4rem;
+}
+
+.post-content h4 {
+    font-size: 1.3rem;
 }
 .post-content h5 {
     font-size: 1.2rem;
@@ -144,11 +151,12 @@ header .post-meta .tag-link:before {
 .post-content h6 {
     font-size: 1.1rem;
 }
+.post-content h2,
 .post-content h3,
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 0.5rem;
 }
 .post-content hr {
@@ -241,9 +249,9 @@ header .post-meta .tag-link:before {
     padding: 0 0.5em;
     content: "—";
 }
-figcaption h4{
-    font-size: 12px!important;
-    margin: 10px 0 20px 0!important;
+figcaption h4 {
+    font-size: 12px !important;
+    margin: 10px 0 20px 0 !important;
     color: #858585;
     font-style: italic;
 }
@@ -281,7 +289,6 @@ figcaption h4{
     top: 1.5rem;
     right: 0;
     display: inline-block;
-    float: right;
     z-index: 100;
 }
 #post-nav .post-menu {
@@ -302,11 +309,16 @@ figcaption h4{
     max-width: 20rem;
     max-height: calc(95vh - 7rem);
 }
+#post-nav #toc li.current {
+    background: #f8f8f8;
+    font-weight: 700;
+}
 #post-nav #toc a {
     text-decoration: none;
 }
 #post-nav #toc a:hover {
     text-decoration: underline;
+    font-weight: 700;
 }
 #post-nav #toc ul {
     margin: 0.3rem 0;
@@ -318,7 +330,7 @@ figcaption h4{
     margin-left: 0.5rem;
 }
 #post-nav #toc ul.toc-h2 > li {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 #post-nav #toc ul.toc-h2 > li::before {
     color: #2bbc8a;
@@ -326,7 +338,7 @@ figcaption h4{
 }
 #post-nav #toc ul.toc-h3 > li {
     color: #666;
-    font-size: 0.7rem;
+    font-size: 0.85rem;
 }
 
 @media (max-width: 960px) {
