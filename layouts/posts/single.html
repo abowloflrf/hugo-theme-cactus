@@ -19,17 +19,16 @@
                 <h1 class="post-title" itemprop="name headline">{{ .Title | markdownify }}</h1>
                 <div class="post-meta">
                     <section class="post-date">
-                        <time datetime="{{ .PublishDate }}" itemprop="datePublished"
-                            >{{ .Date.Format "2006-01-02" }}</time
-                        >
+                        <time datetime="{{ .PublishDate }}" itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time>
                     </section>
                     {{ if .Param "tags" }}
                     <section class="post-tags">
                         <i class="fas fa-tag"></i>
-                        {{ range .Param "tags" }} {{ $name := . }} {{ with $.Site.GetPage (printf "/%s/%s" "tags" ($name
-                        | urlize)) }}
+                        {{ range .Param "tags" }}
+                        {{ $name := . }} {{ with $.Site.GetPage (printf "/%s/%s" "tags" ($name | urlize)) }}
                         <a class="tag-link" href="{{ .Permalink }}">{{ $name }}</a>
-                        {{ end }} {{ end }}
+                        {{ end }}
+                        {{ end }}
                     </section>
                     {{ end }}
                 </div>
