@@ -13,10 +13,11 @@
             </div>
             <div class="meta">
                 <div class="post-tags">
-                    {{ range .Page.Params.tags }} {{ $name := . }} {{ with $.Site.GetPage (printf "/%s/%s" "tags" ($name
-                    | urlize)) }}
+                    {{ range .Page.Params.tags }}
+                    {{ $name := . }} {{ with $.Site.GetPage (printf "/%s/%s" "tags" ($name | urlize)) }}
                     <a href="{{ .Permalink }}">{{ $name }}</a>
-                    {{ end }} {{ end }}
+                    {{ end }}
+                    {{ end }}
                 </div>
                 <time datetime="{{ .PublishDate }}" itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time>
             </div>
