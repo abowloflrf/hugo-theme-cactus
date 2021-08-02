@@ -5,7 +5,7 @@
     <hr>
     <section class="tag-list">
         {{ range .Data.Terms.Alphabetical }}
-            <span class="tag"><a href="{{ .Page.Permalink }}"><b># {{ .Page.Title }}</b>[{{ .Count }}]</a></span>
+            <span class="tag"><a href="{{ .Page.RelPermalink }}"><b># {{ .Page.Title }}</b>[{{ .Count }}]</a></span>
         {{ end }}
     </section>
 </main>

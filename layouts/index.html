@@ -9,13 +9,13 @@
         {{ range first 20 (where .Site.RegularPages "Section" "posts") }}
         <article class="post-item">
             <div class="post-title">
-                <a href="{{ .Permalink }}"><b>{{ .Title }}</b></a>
+                <a href="{{ .RelPermalink }}"><b>{{ .Title }}</b></a>
             </div>
             <div class="meta">
                 <div class="post-tags">
                     {{ range .Page.Params.tags }}
                     {{ $name := . }} {{ with $.Site.GetPage (printf "/%s/%s" "tags" ($name | urlize)) }}
-                    <a href="{{ .Permalink }}">{{ $name }}</a>
+                    <a href="{{ .RelPermalink }}">{{ $name }}</a>
                     {{ end }}
                     {{ end }}
                 </div>
@@ -29,7 +29,7 @@
 <section id="tags" class="tag-list">
     {{ range .Site.Taxonomies.tags}}
     <span class="tag"
-        ><a href="{{ .Page.Permalink }}"><b># {{ .Page.Title }}</b>[{{ .Count }}]</a></span
+        ><a href="{{ .Page.RelPermalink }}"><b># {{ .Page.Title }}</b>[{{ .Count }}]</a></span
     >
     {{ end }}
 </section>

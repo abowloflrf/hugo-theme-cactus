@@ -17,7 +17,7 @@
         {{- else if lt $next_heading ($.Scratch.Get "last_level") -}}
             </ul>
         {{- end -}}
-        <li><a href="{{ relref $.Page $href }}">{{- $header | plainify | htmlUnescape -}}</a></li>
+        <li><a href="#{{ $anchorId }}">{{- $header | plainify | htmlUnescape -}}</a></li>
         {{ $.Scratch.Set "last_level" $next_heading }}
     {{- end -}}
 {{- end -}}

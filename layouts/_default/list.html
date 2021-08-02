@@ -10,7 +10,7 @@
                 <div class="meta">
                     <time datetime="{{ .PublishDate }}" itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time>
                 </div>
-                <span><a href="{{ .Permalink }}">{{ .Title }}</a></span>
+                <span><a href="{{ .RelPermalink }}">{{ .Title }}</a></span>
             </li>
             {{ end }}
         </ul>
