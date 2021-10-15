@@ -35,7 +35,7 @@
             </header>
             <section class="post-content" itemprop="articleBody">
                 {{ if .Date.Before (now.AddDate -2 0 0) }}
-                    <p style="background-color:rgb(255, 213, 159);font-weight: bold;">这是一篇发布大于两年前的文章，当时的一些内容可能已不在适用于现在，请谨慎判断文章内容的可靠性</p>
+                    <p style="background-color:rgb(255, 213, 159);font-weight: bold;">这是一篇发布时间大于两年的文章，当时的一些内容或笔者曾经的思维可能已不再适用于现在，请谨慎判断文章内容的可靠性</p>
                     <hr>
                 {{ end }}
                 {{ .Content }}
