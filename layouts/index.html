@@ -6,7 +6,7 @@
 <hr />
 <section id="writing">
     <main class="post-list">
-        {{ range first 20 (where .Site.RegularPages "Section" "posts") }}
+        {{ range first 100 (where .Site.RegularPages "Section" "posts") }}
         <article class="post-item">
             <div class="post-title">
                 <a href="{{ .RelPermalink }}">{{ .Title }}</a>
