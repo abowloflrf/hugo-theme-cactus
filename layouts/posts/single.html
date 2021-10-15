@@ -23,7 +23,7 @@
                     </section>
                     {{ if .Param "tags" }}
                     <section class="post-tags">
-                        <i class="fas fa-tag"></i>
+                        
                         {{ range .Param "tags" }}
                         {{ $name := . }} {{ with $.Site.GetPage (printf "/%s/%s" "tags" ($name | urlize)) }}
                         <a class="tag-link" href="{{ .RelPermalink }}">{{ $name }}</a>

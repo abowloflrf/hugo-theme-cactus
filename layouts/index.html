@@ -9,17 +9,20 @@
         {{ range first 20 (where .Site.RegularPages "Section" "posts") }}
         <article class="post-item">
             <div class="post-title">
-                <a href="{{ .RelPermalink }}"><b>{{ .Title }}</b></a>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             </div>
             <div class="meta">
+                <time datetime="{{ .PublishDate }}" itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time>
                 <div class="post-tags">
                     {{ range .Page.Params.tags }}
-                    {{ $name := . }} {{ with $.Site.GetPage (printf "/%s/%s" "tags" ($name | urlize)) }}
-                    <a href="{{ .RelPermalink }}">{{ $name }}</a>
+                    {{ $tagname := . }} 
+
+                    {{ with $.Site.GetPage (printf "/%s/%s" "tags" $tagname) }}
+                        <a href="{{ .RelPermalink }}">{{ $tagname }}</a>
                     {{ end }}
+
                     {{ end }}
                 </div>
-                <time datetime="{{ .PublishDate }}" itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time>
             </div>
         </article>
         {{ end }}

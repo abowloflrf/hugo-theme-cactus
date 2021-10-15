@@ -1,6 +1,7 @@
 @import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
 @import url("https://fonts.loli.net/css2?family=Caveat&display=swap");
 @import url("https://fonts.loli.net/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.loli.net/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 html,
 body,
@@ -301,7 +302,7 @@ ul,
 ol,
 dl,
 blockquote {
-    margin: 0.8em 0 1em 0;
+    margin-bottom: 16px;
 }
 
 ol,
@@ -392,10 +393,11 @@ body {
     padding-right: 2rem;
     height: 100%;
     color: #383838;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
-    font-family: "IBM Plex Mono", "JetBrains Mono", "Fira Code", Consolas, Menlo, "Source Han Sans CN", "PingFang SC",
-        monospace;
+    /* font-family: "IBM Plex Mono", "JetBrains Mono", "Fira Code", Consolas, Menlo, "Source Han Sans CN", "PingFang SC",
+        monospace; */
+    font-family: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-rendering: geometricPrecision;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -466,21 +468,20 @@ hr {
     -webkit-font-smoothing: antialiased;
 }
 #header #nav {
+    /* font-family: "IBM Plex Mono", "JetBrains Mono", "Fira Code", Consolas, "Liberation Mono", Menlo, monospace; */
     color: #2bbc8a;
     letter-spacing: 0em;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 0.8rem;
+    font-weight: 600;
 }
 #header #nav ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    line-height: 15px;
+    /* line-height: 15px; */
 }
 #header #nav ul li {
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 10px;
     vertical-align: middle;
 }
 #header #nav ul li::after {
@@ -491,7 +492,7 @@ hr {
     content: "";
 }
 #header #nav ul a {
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .post-list {
@@ -499,7 +500,7 @@ hr {
 }
 .post-list .post-item {
     margin-left: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 .post-list .post-item {
     display: block;
@@ -510,26 +511,32 @@ hr {
 .post-list .post-item .post-title a {
     color: #383838;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 .post-list .post-item .post-title {
     margin-bottom: 5px;
 }
 .post-list .meta {
-    color: #9eabb3;
+    font-style: italic;
+    font-family: "IBM Plex Mono", "JetBrains Mono", "Fira Code", Consolas, "Liberation Mono", Menlo, monospace;
+    color: #8c8c8c;
     font-size: 0.8rem;
 }
 .post-list .meta .post-tags {
     display: inline-block;
 }
 .post-list .meta .post-tags a {
-    padding: 2px 4px;
+    font-style: italic;
+    padding: 1px 4px;
     text-decoration: none;
     border: #e3e9ed 1px solid;
-    border-radius: 4px;
+    border-radius: 3px;
 }
-.post-list .meta time {
-    float: right;
+.post-list .meta .post-tags a:hover {
+    font-weight: bold;
+    color: #383838;
+    border: #383838 1px solid;
 }
 
 .tag-name {
